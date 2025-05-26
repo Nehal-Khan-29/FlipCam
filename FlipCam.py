@@ -12,8 +12,8 @@ from tkinter import messagebox
 
 icon = tk.Tk()
 icon.title('FlipCam')
-icon.iconbitmap("E:\\NK programs\\Python\\python save\\FlipCam\\icon.ico")
-image = Image.open("E:\\NK programs\\Python\\python save\\FlipCam\\icon.png")
+icon.iconbitmap("icon.ico")
+image = Image.open("icon.png")
 tk_image = ImageTk.PhotoImage(image)
 image_label = tk.Label(icon, image=tk_image)
 image_label.pack()
@@ -32,12 +32,12 @@ icon.mainloop()
 #variables
 
 cap=cv2.VideoCapture(0)
-folder_path = "C:/Users/NEHAL KHAN/Videos/Captures/FlipCam"
-photo_value_path="C:/Users/NEHAL KHAN/Videos/Captures/FlipCam/Photo_value.txt"
+folder_path = "FlipCam"
+photo_value_path="FlipCam/Photo_value.txt"
 
 #Directory add
 
-directory = "C:/Users/NEHAL KHAN/Videos/Captures"
+directory = os.getcwd()
 folder_name = "FlipCam"
 
 if not os.path.exists(os.path.join(directory, folder_name)):
